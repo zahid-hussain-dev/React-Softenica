@@ -18,14 +18,12 @@ import { Gurentee } from "../Forms/Gurentee";
 import { Carousel } from "../Forms/Carousel";
 
 export const Main = () => {
-  const [inputs, setInputs] = useState({});
   const [imageNumber, setImageNumber] = useState(1);
 
-  const [imagepoint, setImagepoint] = useState(false);
   const showFeatures = useSelector((state) => state.user.showFeatures);
   const dispatch = useDispatch();
 
-  console.log("show feature", showFeatures);
+  // console.log("show feature", showFeatures);
   const inputRef = useRef();
   const inputRef1 = useRef();
   const inputRef2 = useRef();
@@ -43,7 +41,7 @@ export const Main = () => {
       }
     });
 
-    console.log("imgNo", imgNo);
+    // console.log("imgNo", imgNo);
 
     if (imgNo) setImageNumber(imgNo);
   };
@@ -81,7 +79,10 @@ export const Main = () => {
         {Object.entries(showFeatures).map(([key, value]) => {
           const Icon = getIcon(value.icon);
           return (
-            <div key={value.id} className="image point sm:hidden hidden lg:flex md:flex xl:flex flex-wrap relative top-32">
+            <div
+              key={value.id}
+              className="image point sm:hidden hidden lg:flex md:flex xl:flex flex-wrap relative top-32"
+            >
               <div className={value.className}>
                 <div
                   className={

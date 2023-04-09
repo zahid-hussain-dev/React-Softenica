@@ -34,71 +34,60 @@ export const Gurentee = () => {
         Garantien
       </div>
       {GurenteeFeatures.map((items, index) => (
-      <div key={items.id} className="flex  ml-6 cursor-pointer mt-4">
-        <div className="bg-gray-50 h-fit p-2.5  rounded-full w-fit ">
-         <items.icon />
-        </div>
-        <div className="flex-col ml-3">
-          <div className=" text-gray-900 text-base font-medium m-auto">
-           {items.name}
+        <div key={items.id} className="flex  ml-6 cursor-pointer mt-4">
+          <div className="bg-gray-50 h-fit p-2.5  rounded-full w-fit ">
+            <items.icon />
           </div>
-          <div className=" text-gray-400 text-sm font-normal m-auto">
-           {items.label}
+          <div className="flex-col ml-3">
+            <div className=" text-gray-900 text-base font-medium m-auto">
+              {items.name}
+            </div>
+            <div className=" text-gray-400 text-sm font-normal m-auto">
+              {items.label}
+            </div>
           </div>
         </div>
-      </div>
       ))}
       <div className="flex flex-row space-x-3 mt-4 justify-center">
-      <div className="flex flex-col w-2/3">
-        
+        <div className="flex flex-col w-2/3">
           <button
             type="submit"
             className=" font-semibold text-gray-400 bg-gray-200 hover:bg-green-200 place-content-center rounded-full py-2 px-2 flex flex-grow"
           >
-          Details zu Garantien
+            Details zu Garantien
           </button>
-        
+        </div>
       </div>
-    </div>
-    <div className="flex flex-row space-x-3 mt-16 justify-center">
-      <div className="flex flex-col w-4/5">
-        
-      <button
-      className="bg-green-50 hover:bg-green-500  rounded-3xl font-medium text-lg flex flex-grow  px-6 py-2  text-center  items-center justify-center  text-white"
-      type="button"
-    >
-    Add To Cart
-    </button>
+      <div className="flex flex-row space-x-3 mt-16 justify-center">
+        <div className="flex flex-col w-4/5">
+          <button
+            className="bg-green-50 hover:bg-green-500  rounded-3xl font-medium text-lg flex flex-grow  px-6 py-2  text-center  items-center justify-center  text-white"
+            type="button"
+          >
+            Add To Cart
+          </button>
+        </div>
       </div>
-    </div>
-    <div className="flex flex-row space-x-3 mt-4 justify-center">
-      <div className="flex flex-col w-4/5">
-        
-      <button
-      className="bg-white hover:bg-green-50 hover:text-white hover:border-none  rounded-3xl font-medium text-lg  border-gray-900 border px-6 py-2  text-center flex flex-grow items-center justify-center  text-gray-900"
-      type="button"
-    >
-    Save Configuration
-    
-    </button>
-    
-        
+      <div className="flex flex-row space-x-3 mt-4 justify-center">
+        <div className="flex flex-col w-4/5">
+          <button
+            className="bg-white hover:bg-green-50 hover:text-white hover:border-none  rounded-3xl font-medium text-lg  border-gray-900 border px-6 py-2  text-center flex flex-grow items-center justify-center  text-gray-900"
+            type="button"
+          >
+            Save Configuration
+          </button>
+        </div>
       </div>
-    </div>
-    <div className="flex flex-row space-x-3 mt-4 justify-center">
-      <div className="flex flex-col items-center  w-4/5">
-        
-      <button
-      className="bg-white w-fit underline hover:border-none  rounded-3xl font-medium text-lg   px-6 py-2  text-center flex flex-grow items-center justify-center  text-gray-900"
-      type="button"
-    >
-    Need Help? Contact Us
-    
-    </button>
-    
-        
+      <div className="flex flex-row space-x-3 mt-4 justify-center">
+        <div className="flex flex-col items-center  w-4/5">
+          <button
+            className="bg-white w-fit underline hover:border-none  rounded-3xl font-medium text-lg   px-6 py-2  text-center flex flex-grow items-center justify-center  text-gray-900"
+            type="button"
+          >
+            Need Help? Contact Us
+          </button>
+        </div>
       </div>
-    </div>
     </>
   );
 };

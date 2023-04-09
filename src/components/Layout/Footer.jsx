@@ -1,11 +1,14 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export const Footer = () => {
   const showPrice = useSelector((state) => state.user.showPrice);
 
   return (
-    <nav className="bg-white  sm:px-4 py-2.5 border border-gray-100 shadow-lg px-4 w-full z-20 bottom-0 fixed left-0 "  style={{ fontFamily: "mulish" }}>
+    <nav
+      className="bg-white  sm:px-4 py-2.5 border border-gray-100 shadow-lg px-4 w-full z-20 bottom-0 fixed left-0 "
+      style={{ fontFamily: "mulish" }}
+    >
       <div className=" flex flex-wrap justify-between items-center ">
         <div className="flex-1 md:order-2 mx-4 ">
           <div

@@ -14,8 +14,8 @@ export const FeatureDetails = () => {
       label: "Heizung",
       name: "Effizienz",
       status: "completed",
-      value:"2/10",
-      className:"border-t-2 border-r-2",
+      value: "2/10",
+      className: "border-t-2 border-r-2",
       icon: Tree,
     },
     {
@@ -23,8 +23,8 @@ export const FeatureDetails = () => {
       label: "Beschattung",
       name: "Komfort",
       status: "completed",
-      className:"border-t-2 border-r-2",
-      value:"10/10",
+      className: "border-t-2 border-r-2",
+      value: "10/10",
       icon: Chat,
     },
     {
@@ -32,16 +32,16 @@ export const FeatureDetails = () => {
       label: "Beschattung",
       name: "Sicherheit",
       status: "completed",
-      className:"border-t-2 border-r-2",
-      value:"5/10",
+      className: "border-t-2 border-r-2",
+      value: "5/10",
       icon: Security,
     },
     {
       id: 4,
       label: "Beschattung",
       name: "Wertsteigerung",
-      value:"2/10",
-      className:"border-t-2 border-r-2",
+      value: "2/10",
+      className: "border-t-2 border-r-2",
       status: "completed",
       icon: Progress,
     },
@@ -52,7 +52,7 @@ export const FeatureDetails = () => {
       label: "Heizung",
       name: "Heizkosten",
       status: "completed",
-      value:"-35%",
+      value: "-35%",
       icon: SaveFile,
     },
     {
@@ -60,7 +60,7 @@ export const FeatureDetails = () => {
       label: "Beschattung",
       name: "Stromkosten",
       status: "completed",
-      value:"-50%",
+      value: "-50%",
       icon: Pig,
     },
     {
@@ -68,7 +68,7 @@ export const FeatureDetails = () => {
       label: "Beschattung",
       name: "CO Emmisionen",
       status: "completed",
-      value:"-40%",
+      value: "-40%",
       icon: SafeHand,
     },
   ];
@@ -85,56 +85,49 @@ export const FeatureDetails = () => {
           </div>
         </div>
         <div className="flex flex-wrap mt-3">
-        {EquipFeatures.map((items, index) => (
+          {EquipFeatures.map((items, index) => (
             <div key={items.id} className=" mx-4">
-            <div >
-              <div
-                className={
-                 
-                    `bg-gray-50  px-6 py-4 rounded-full w-fit border-l-white border-b-2 border-l-2 border-b-white border-green-50 ${items.className}`
-                }
-              >
-                {" "}
-                <items.icon />
-            <div className="text-sm font-medium"> {items.value}</div>
-            
+              <div>
+                <div
+                  className={`bg-gray-50  px-6 py-4 rounded-full w-fit border-l-white border-b-2 border-l-2 border-b-white border-green-50 ${items.className}`}
+                >
+                  {" "}
+                  <items.icon />
+                  <div className="text-sm font-medium"> {items.value}</div>
+                </div>
+                <div className="text-sm font-normal text-center">
+                  {items.name}{" "}
+                </div>
               </div>
-              <div className="text-sm font-normal text-center">{items.name} </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
       <div className="flex-1">
         <div className="flex flex-wrap mx-2">
-          <h1 className="text-base font-semibold w-3/4">
-          Ihre Ersparnis
-          </h1>
+          <h1 className="text-base font-semibold w-3/4">Ihre Ersparnis</h1>
           <div className="text-base font-normal underline ml-auto">
             Mehr Info
           </div>
         </div>
         <div className="flex flex-wrap mt-3">
-        {SavingFeatures.map((items, index) => (
+          {SavingFeatures.map((items, index) => (
             <div key={items.id} className=" mx-4 ">
-            <div >
-              <div
-                className={
-                 
-                    `bg-gray-50 px-6 py-4 rounded-full w-fit border-2 border-l-white border-b-2 border-l-2 border-b-white  border-green-50 `
-                }
-              >
-                {" "}
-                <items.icon />
-            <div className="text-sm font-medium"> {items.value}</div>
+              <div>
+                <div
+                  className={`bg-gray-50 px-6 py-4 rounded-full w-fit border-2 border-l-white border-b-2 border-l-2 border-b-white  border-green-50 `}
+                >
+                  {" "}
+                  <items.icon />
+                  <div className="text-sm font-medium"> {items.value}</div>
+                </div>
+                <div className="text-sm font-normal text-center">
+                  {items.name}{" "}
+                </div>
               </div>
-              <div className="text-sm font-normal text-center">{items.name} </div>
-              
             </div>
-          </div>
-        ))}
+          ))}
         </div>
-
       </div>
     </div>
   );

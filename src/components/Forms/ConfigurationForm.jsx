@@ -43,21 +43,16 @@ export const ConfigurationForm = () => {
       </div>
 
       <div className="w-full mt-4">
-        <Formik
-          initialValues={initialValues}
-          onSubmit={onSubmit}
-          // validationSchema={validationSchema}
-          // validateOnMount
-        >
+        <Formik initialValues={initialValues} onSubmit={onSubmit}>
           <Form>
             <div className="grid space-y-2">
               <Field name="status">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <>
                       {" "}
-                      <label className="text-base font-semibold" for="cars">
+                      <label className="text-base font-semibold" htmlFor="cars">
                         Installationsort
                       </label>
                       <select
@@ -93,11 +88,11 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="status1">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <>
                       {" "}
-                      <label className="text-base font-semibold" for="cars">
+                      <label className="text-base font-semibold" htmlFor="cars">
                         Installationsort
                       </label>
                       <select
@@ -133,11 +128,11 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="status2">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <>
                       {" "}
-                      <label className="text-base font-semibold" for="cars">
+                      <label className="text-base font-semibold" htmlFor="cars">
                         Installationsort
                       </label>
                       <select
@@ -173,11 +168,11 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="status3">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <>
                       {" "}
-                      <label className="text-base font-semibold" for="cars">
+                      <label className="text-base font-semibold" htmlFor="cars">
                         Installationsort
                       </label>
                       <select
@@ -224,7 +219,7 @@ export const ConfigurationForm = () => {
               </div>
               <Field name="description mt-8">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                       <input
@@ -234,7 +229,7 @@ export const ConfigurationForm = () => {
                         name="sparen"
                         value="sparen"
                       />
-                      <label for="sparen" className="ml-2">
+                      <label htmlFor="sparen" className="ml-2">
                         {" "}
                         Heizkosten sparen
                       </label>
@@ -245,7 +240,7 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="description ">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                       <input
@@ -255,7 +250,7 @@ export const ConfigurationForm = () => {
                         name="Stromkosten"
                         value="Stromkosten"
                       />
-                      <label for="Stromkosten" className="ml-2">
+                      <label htmlFor="Stromkosten" className="ml-2">
                         {" "}
                         Stromkosten sparen
                       </label>
@@ -266,7 +261,7 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="description ">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                       <input
@@ -276,7 +271,7 @@ export const ConfigurationForm = () => {
                         name="Wohnkomfort"
                         value="Wohnkomfort"
                       />
-                      <label for="Wohnkomfort" className="ml-2">
+                      <label htmlFor="Wohnkomfort" className="ml-2">
                         {" "}
                         Wohnkomfort steigern
                       </label>
@@ -287,7 +282,7 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="description ">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                       <input
@@ -297,7 +292,7 @@ export const ConfigurationForm = () => {
                         name="Sicherheit"
                         value="Sicherheit"
                       />
-                      <label for="Sicherheit" className="ml-2">
+                      <label htmlFor="Sicherheit" className="ml-2">
                         {" "}
                         Mehr Sicherheit{" "}
                       </label>
@@ -308,7 +303,7 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="description ">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                       <input
@@ -318,7 +313,7 @@ export const ConfigurationForm = () => {
                         name="Wertsteigerung"
                         value="Wertsteigerung"
                       />
-                      <label for="Wertsteigerung" className="ml-2">
+                      <label htmlFor="Wertsteigerung" className="ml-2">
                         {" "}
                         Wertsteigerung der Immobilie
                       </label>
@@ -329,7 +324,7 @@ export const ConfigurationForm = () => {
               </Field>
               <Field name="description ">
                 {(props) => {
-                  const { field, form, meta } = props;
+                  const { field } = props;
                   return (
                     <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                       <input
@@ -339,7 +334,7 @@ export const ConfigurationForm = () => {
                         name="Barrierefreiheit"
                         value="Barrierefreiheit"
                       />
-                      <label for="Barrierefreiheit" className="ml-2">
+                      <label htmlFor="Barrierefreiheit" className="ml-2">
                         {" "}
                         Barrierefreiheit im Alter
                       </label>
@@ -352,7 +347,7 @@ export const ConfigurationForm = () => {
 
             <Field>
               {(props) => {
-                const { field, form, meta } = props;
+                const {  form } = props;
                 const { isSubmitting } = form;
                 return (
                   <>
@@ -490,16 +485,16 @@ export const ConfigurationForm = () => {
                                     <path
                                       d="M22 11.0799V11.9999C21.9988 14.1563 21.3005 16.2545 20.0093 17.9817C18.7182 19.7088 16.9033 20.9723 14.8354 21.5838C12.7674 22.1952 10.5573 22.1218 8.53447 21.3744C6.51168 20.6271 4.78465 19.246 3.61096 17.4369C2.43727 15.6279 1.87979 13.4879 2.02168 11.3362C2.16356 9.18443 2.99721 7.13619 4.39828 5.49694C5.79935 3.85768 7.69279 2.71525 9.79619 2.24001C11.8996 1.76477 14.1003 1.9822 16.07 2.85986"
                                       stroke="#01E994"
-                                      stroke-width="1.5"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth="1.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                     />
                                     <path
                                       d="M22 4L12 14.01L8.5 11.5"
                                       stroke="#01E994"
-                                      stroke-width="1.5"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth="1.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                     />
                                   </svg>
                                 </div>
@@ -540,16 +535,16 @@ export const ConfigurationForm = () => {
                                     <path
                                       d="M22 11.0799V11.9999C21.9988 14.1563 21.3005 16.2545 20.0093 17.9817C18.7182 19.7088 16.9033 20.9723 14.8354 21.5838C12.7674 22.1952 10.5573 22.1218 8.53447 21.3744C6.51168 20.6271 4.78465 19.246 3.61096 17.4369C2.43727 15.6279 1.87979 13.4879 2.02168 11.3362C2.16356 9.18443 2.99721 7.13619 4.39828 5.49694C5.79935 3.85768 7.69279 2.71525 9.79619 2.24001C11.8996 1.76477 14.1003 1.9822 16.07 2.85986"
                                       stroke="#01E994"
-                                      stroke-width="1.5"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth="1.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                     />
                                     <path
                                       d="M22 4L12 14.01L8.5 11.5"
                                       stroke="#01E994"
-                                      stroke-width="1.5"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                                      strokeWidth="1.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
                                     />
                                   </svg>
                                 </div>

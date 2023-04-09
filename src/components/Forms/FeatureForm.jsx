@@ -1,8 +1,7 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Form, Field } from "formik";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setshowFeatures, setshowPrice } from "../store/slices/user/userSlice";
-
 
 export const FeatureForm = () => {
   const dispatch = useDispatch();
@@ -14,9 +13,8 @@ export const FeatureForm = () => {
       name: "light",
       value: "+ 1.232,00€",
       status: "completed",
-      className:"absolute left-32",
-      icon:"Light",
-      
+      className: "absolute left-32",
+      icon: "Light",
     },
     {
       id: 2,
@@ -24,8 +22,8 @@ export const FeatureForm = () => {
       name: "Bell",
       value: "+ 1.232,00€",
       status: "completed",
-      className:"absolute left-96 top-20",
-      icon:"Bell",
+      className: "absolute left-96 top-20",
+      icon: "Bell",
     },
     {
       id: 3,
@@ -33,36 +31,35 @@ export const FeatureForm = () => {
       name: "Charge",
       value: "+ 1.232,00€",
       status: "completed",
-      className:"absolute left-48",
-      icon:"Charge",
-      
+      className: "absolute left-48",
+      icon: "Charge",
     },
     {
       id: 4,
       label: "Beschattung",
       name: "Door",
-      className:"absolute left-2/3 top-28",
+      className: "absolute left-2/3 top-28",
       value: "+ 1.232,00€",
       status: "completed",
-      icon:"Door",
+      icon: "Door",
     },
     {
       id: 5,
       label: "Beschattung",
       name: "Lawn",
-      className:"absolute left-4 top-36",
+      className: "absolute left-4 top-36",
       value: "+ 1.232,00€",
       status: "completed",
-      icon:"Lawn",
+      icon: "Lawn",
     },
     {
       id: 6,
       label: "Beschattung",
       name: "Camera",
-      className:"absolute left-24",
+      className: "absolute left-24",
       value: "+ 1.232,00€",
       status: "completed",
-      icon:"Camera",
+      icon: "Camera",
     },
   ]);
   const initialValues = {
@@ -75,7 +72,7 @@ export const FeatureForm = () => {
   const onSubmit = (values, onSubmitProps) => {
     console.log("Form Data", values);
   };
-  
+
   const setValueRate = (Features) => {
     let rate = null;
 
@@ -85,20 +82,18 @@ export const FeatureForm = () => {
       }
     });
 
-    console.log("rate", rate);
+    // console.log("rate", rate);
 
-    if (rate){
+    if (rate) {
       dispatch(setshowPrice(rate));
-    } 
+    }
   };
-
 
   const handleComplete = (id, index) => {
     console.log("id", id);
     const Task = Features.map((items) => {
       if (items.id === id) {
         if (items.status === "completed") {
-          
           return { ...items, status: "Uncompleted" };
         } else {
           return { ...items, status: "completed" };
@@ -108,7 +103,7 @@ export const FeatureForm = () => {
     });
     SetFeatures(Task);
     dispatch(setshowFeatures(Task));
-    console.log("Features....", Task);
+    // console.log("Features....", Task);
     setValueRate(Task);
     // Features[index].status === "Uncompleted";
     // console.log("UnCompleted")
@@ -137,7 +132,7 @@ export const FeatureForm = () => {
               {Features.map((items, index) => (
                 <Field key={index} name={`description-${items.id} mt-8`}>
                   {(props) => {
-                    const { field, form, meta } = props;
+                    const { field } = props;
                     return (
                       <div className="border py-3 bg-default relative block w-full px-4 border-gray-200 rounded-full hover:border-green-500 foucs: outline-none focus:border-green-50 transition-colors">
                         <input
@@ -148,7 +143,7 @@ export const FeatureForm = () => {
                           value={items.label}
                           onChange={() => handleComplete(items.id, index)}
                         />
-                        <label for="sparen" className="ml-2">
+                        <label htmlFor="sparen" className="ml-2">
                           {items.label}{" "}
                           <span className="text-right font-semibold float-right">
                             {items.value}
@@ -164,7 +159,7 @@ export const FeatureForm = () => {
 
             <Field>
               {(props) => {
-                const { field, form, meta } = props;
+                const {  form } = props;
                 const { isSubmitting } = form;
                 return (
                   <>
